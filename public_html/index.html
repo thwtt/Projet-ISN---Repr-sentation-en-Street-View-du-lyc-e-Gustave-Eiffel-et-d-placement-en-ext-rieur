@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <link href="css/mycss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <div class="header" id="header1">
+                <form>
+                    <input type="button" value="Fermer la recherche" class="btn" id="btnRecherche">
+                </form>
+            </div>
+            <div class="header" id="header2">
+                <form>
+                    <input type="button" value="Fermer la carte" class="btn" id="btnCarte">
+                </form>
+            </div>
+        </header>
+        <div id="divPano"></div>
+        <div id="divCarte">
+            <div>
+                <img src="img/Gustave500.png" alt="Plan du lycée Gustave Eiffel" id="gustave"/>
+            </div>
+            <div>
+                <svg
+                    viewBox="0 0 640 393">
+                <g>
+                <circle
+                    id="psi"
+                    cx="321.42822"
+                    cy="103.91009"
+                    r="5" />
+                <circle
+                    id="pparking"
+                    cx="234.30113"
+                    cy="95.668335"
+                    r="5" />
+                <circle
+                    id="pdevantinternat"
+                    cx="224.882"
+                    cy="241.66504"
+                    r="5" />
+                <circle
+                    id="pdevantfoyer"
+                    cx="257.26031"
+                    cy="269.33377"
+                    r="5" />
+                <circle
+                    id="pcourcantine"
+                    cx="310.24298"
+                    cy="274.63202"
+                    r="5" />
+                <circle
+                    id="phallhonneur"
+                    cx="389.12827"
+                    cy="276.39813"
+                    r="5" />
+                <circle
+                    id="pcourphys"
+                    cx="466.83621"
+                    cy="275.80942"
+                    r="5" />
+                <circle
+                    id="pentree"
+                    fill="#1FA055"
+                    cx="388.28879"
+                    cy="361.31497"
+                    r="7" />
+                <circle
+                    id="pLperm"
+                    cx="369.70132"
+                    cy="236.36676"
+                    r="5" />
+                <circle
+                    id="pLcdi"
+                    cx="408.91006"
+                    cy="236.36676"
+                    r="5" />
+                <circle
+                    id="pviesco"
+                    cx="390.30569"
+                    cy="157.48146"
+                    r="5" />
+                <circle
+                    id="pversP"
+                    cx="322.01691"
+                    cy="158.07014"
+                    r="5" />
+                </g>
+                </svg>
+            </div>
+        </div>
+        <div id="recherche">
+            <div id="divbarrecherche">
+
+                <form id="form">
+                    <input type="text" value="" placeholder="Search" id="barrecherche">
+                    <button type="button" id="boutton">
+                        <img id="loupe" src="img/loupe.png" alt="Loupe" />
+                    </button>
+                </form>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Bâtiment
+                        </th>
+                        <th>
+                            Section
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+        <script src="js/jquery/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALTie51TIaWY_mGgtkjsUW9jldVCbBGmk"></script>
+        <script type="text/javascript" src="js/tableaupano.js"></script>
+        <script type="text/javascript" src="js/affstreet.js"></script>
+        <script type="text/javascript" src="js/recherche.js"></script>
+        <script type="text/javascript" src="js/carte.js"></script>
+    </body>
+</html>

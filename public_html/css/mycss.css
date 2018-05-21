@@ -1,0 +1,157 @@
+html,body {
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%; 
+}
+
+header {
+    height:7%; /* header prend 7% de la page web */
+    width:100%;
+}
+.header {
+    height:100%;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+}
+#header1 {
+    float: left;
+}
+#header2 {
+    float:right;
+}
+form { 
+    height: 100%; /* prend toute la hauteur du div header */
+}
+.btn{ /* style des 2 premiers boutons */
+    padding:6px 5px 6px 5px;
+    font:bold 100% Arial;
+    background:#f5f5f5;
+    color:#555;
+    border-radius:2px;
+    width: 100%;
+    height: 100%;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 3px #999;
+    display: block;
+}
+
+#divPano {
+    width: 100%;
+    height: 93%; /* le reste prend 93% de la page web : total 100% */
+    overflow: visible;
+    z-index: 1; /* le z-index inférieur à celui de la #divCarte et de la #recherche le place en arrière comparé à elles */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+tbody td {
+    border: 1px solid black;
+    padding: 3px 3px 3px 3px;
+    background-color: rgb(230, 247, 255);
+    color: black;
+}
+thead th {
+    border: 1px solid black;
+    padding: 3px 0px 3px 0px;
+}
+thead {
+    background-color: red;
+    color: white;
+}
+tfoot {
+    background-color: silver;
+    color: red;
+}
+#recherche {
+    width: 48%;
+    height: auto;
+    position: absolute;
+    left: 0px;
+    bottom: 5%;
+    z-index: 2;
+    opacity: 0.87;
+    text-align: center;
+    padding: 1%;
+}
+#loupe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+#boutton {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    outline: none!important;
+    cursor: pointer;
+
+    & img {
+        width: 20px;
+        height: 20px;
+        fill: #5a6674;
+    }
+}
+#form { /* style de la barre et bouton de la recherche */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    transition: all 0.3s ease;
+}
+#barrecherche {
+    position: absolute;
+    top: 10px;
+    left: 38px;
+    font-size: 14px;
+    background: none;
+    color: #5a6674;
+    width: 195px;
+    height: 20px;
+    border: none;
+    appearance: none;
+    outline: none;
+
+}
+
+#divCarte {
+    width: 500px; /* dimensions de la carte */
+    height: 307px;
+    position: absolute;
+    bottom: 5%; /* la carte est à 5% du bord inférieur de l'écran */
+    right: 2%; /* elle est à 2% du côté droit de l'écran */
+    z-index: 2; /* le z-index est supérieur à celui de la #divPano donc la #divCarte est devant */
+    opacity: 0.8;
+}
+#divCarte:hover{
+    opacity: 1; /* la transparence disparaît au survol de la div */
+}
+#divCarte div{
+    position: absolute; /* spécifie la position absolue des div de la carte PNG et du SVG pour qu'ils soient superposés */
+    width: 100%;
+    height: 100%;
+}
+svg { /* remplit entièrement la #divCarte avec ces points pour qu'ils soient bien placés sur le PNG */
+    height: 100%;
+    width: 100%;
+}
+circle:hover{ /* change la couleur et le curseur au survol d'un point */
+    fill: #C61F1F;
+    cursor: pointer;
+}
